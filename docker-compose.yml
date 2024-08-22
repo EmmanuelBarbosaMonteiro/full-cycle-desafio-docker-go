@@ -1,0 +1,12 @@
+services:
+  go-app:
+    image: golang:latest
+    container_name: go-app
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    command: bash
+    ports:
+      - "8080:8080"
+    stdin_open: true
+    tty: true
